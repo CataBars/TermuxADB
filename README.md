@@ -104,7 +104,7 @@ adb connect [IP]:[PORT]
 ```
 adb shell
 ```
-И вы в Android Brigde Debug (ADB) \
+И вы в Android Debug Bridge (ADB) \
 Для выхода 
 ```
 exit
