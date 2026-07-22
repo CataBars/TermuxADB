@@ -20,7 +20,7 @@ git clone https://github.com/CataBars/TermuxADB
 Navigate to it and run pair.sh:
 
 ```
-cd TermuxADB && source pair.sh
+cd TermuxADB && bash pair.sh
 ```
 
 You should see a notification from Termux:API.
@@ -76,7 +76,7 @@ git clone https://github.com/CataBars/TermuxADB
 ```
 Перейдите в него и запустите pair.sh
 ```
-cd TermuxADB && source pair.sh
+cd TermuxADB && bash pair.sh
 ```
 У вас должно появиться уведомление от Termux:API
 
