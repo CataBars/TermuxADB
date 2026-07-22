@@ -1,9 +1,69 @@
 # TermuxADB
 Connecting to ADB via Termux and Termux:API on Android 11+ using wireless debugging
 
-ENG:
+## ENG:
+First, update the termux-api packages:
 
-RUS:
+```
+pkg update && pkg install termux-api
+```
+
+Then install the latest version of Termux-API from F-droid. 
+After installation, open the app and follow the instructions shown there.
+
+Clone the repository:
+
+```
+git clone https://github.com/CataBars/TermuxADB
+```
+
+Navigate to it and run pair.sh:
+
+```
+cd TermuxADB && source pair.sh
+```
+
+You should see a notification from Termux:API.
+
+<img src="images/notification.jpg" width="300" alt="Notification">
+
+Go to Settings and navigate to "System" > "Developer options" > "Wireless debugging" (Enable it).
+
+<img src="images/wireless.jpg" width="300" alt="Wireless debugging">
+
+Tap on "Pair device with pairing code".
+
+<img src="images/code.jpg" width="300" alt="IP and code">
+
+Enter the IP, port, and 6-digit code you received into the notification in this format: \
+[IP]:[PORT] [CODE] \
+If you entered everything correctly, the terminal should display: \
+"Successfully pairing to [IP]:[PORT] [CODE] ..." \
+Your device is now saved permanently, unless you revoke it yourself. 
+
+Next, type:
+
+```
+adb connect [IP]:[PORT]
+```
+
+Where [IP]:[PORT] should be the one shown under "Device name".
+
+Then type:
+
+```
+adb shell
+```
+
+And you're in Android Debug Bridge (ADB) shell.
+
+To exit: 
+
+```
+exit
+```
+
+## RUS:
 Для начала обновите пакеты termux-api
 ```
 pkg update && pkg install termux-api
